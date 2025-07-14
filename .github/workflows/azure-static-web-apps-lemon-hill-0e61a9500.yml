@@ -14,38 +14,19 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
-    permissions:
-      id-token: write
-      contents: read
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: true
-          lfs: false
 
-      - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
-
-      - name: Get Id Token
-        uses: actions/github-script@v6
-        id: idtoken
-        with:
-          script: |
-            const core = require('@actions/core');
-            return await core.getIDToken();
-          result-encoding: string
-
-      - name: Build And Deploy
+      - name: Build and Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_HILL_0E61A9500 }}
           action: "upload"
-          app_location: "/"                # Folder where index.html is
-          api_location: ""                 # No API for static site
-          output_location: "/"             # Where files are served from (same)
-          app_build_command: ""            # << Skip the build step
-          github_id_token: ${{ steps.idtoken.outputs.result }}
+          app_location: "/"              # Where your index.html is
+          output_location: "/"           # Output folder (same for static)
+          app_build_command: ""          # << SKIPS BUILD COMPLETELY
+          api_location: ""               # No APIs used
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
