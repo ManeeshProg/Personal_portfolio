@@ -25,7 +25,7 @@ jobs:
           action: "upload"
           app_location: "/"              # Where your index.html is
           output_location: "/"           # Output folder (same for static)
-          app_build_command: ""          # << SKIPS BUILD COMPLETELY
+          skip_app_build: true           # Skip build process entirely
           api_location: ""               # No APIs used
 
   close_pull_request_job:
