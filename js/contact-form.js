@@ -4,9 +4,9 @@
 
     // EmailJS Configuration
     const EMAIL_CONFIG = {
-        serviceId: 'YOUR_SERVICE_ID',     // Replace with your EmailJS service ID
-        templateId: 'YOUR_TEMPLATE_ID',   // Replace with your EmailJS template ID
-        publicKey: 'YOUR_PUBLIC_KEY'      // Replace with your EmailJS public key
+        serviceId: 'service_p5emoql',     // Your Gmail service ID
+        templateId: 'template_mn36o1k',   // Your EmailJS template ID
+        publicKey: 'PPzsoujcBxdaQMxnY'    // Your EmailJS public key
     };
 
     // Initialize EmailJS when page loads
