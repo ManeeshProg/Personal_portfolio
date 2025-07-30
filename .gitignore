@@ -4,6 +4,10 @@
 # Configuration files with sensitive data
 config.js
 
+# Environment files with API keys
+.env
+personal-portfolio-chatbot/.env
+
 # OS generated files
 .DS_Store
 .DS_Store?

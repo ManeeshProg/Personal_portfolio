@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': '#121212',
+              'brand-surface': '#1e1e1e',
+              'brand-primary': '#bb86fc',
+              'brand-secondary': '#03dac6',
+              'brand-text': '#e0e0e0',
+              'brand-text-secondary': '#b0b0b0',
+              'user-bubble': '#373737',
+              'bot-bubble': '#2a2a2a',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'dot-pulse': 'dotPulse 1.4s infinite ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              dotPulse: {
+                '0%': { transform: 'scale(0.8)', opacity: '0.5' },
+                '50%': { transform: 'scale(1)', opacity: '1' },
+                '100%': { transform: 'scale(0.8)', opacity: '0.5' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.11.0",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-bg text-brand-text">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
