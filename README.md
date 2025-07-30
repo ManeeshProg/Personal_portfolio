@@ -1,220 +1,184 @@
-# 🚀 Maneesh V - AI Engineer Portfolio
+# 🚀 Maneesh V - Portfolio with AI Chat Assistant
 
-A modern, responsive portfolio website showcasing my expertise in AI, Computer Vision, and Machine Learning. Built with HTML5, CSS3, and JavaScript.
+A modern, interactive portfolio website featuring an AI-powered chat assistant built with cutting-edge web technologies.
 
-![Portfolio Preview](images/bg_1.jpg)
+![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-brightgreen)
+![AI Assistant](https://img.shields.io/badge/AI-Powered-blue)
+![Responsive](https://img.shields.io/badge/Mobile-Responsive-orange)
 
 ## 🌟 Features
 
-- **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI/UX** - Clean, professional design with smooth animations
-- **Multi-page Structure** - Organized content across dedicated pages
-- **Contact Form Integration** - Formspree-powered contact form
-- **SEO Optimized** - Meta tags and structured content for better search visibility
-- **Fast Loading** - Optimized assets and efficient code structure
+### 🎯 **Interactive AI Chat Assistant**
+- **Real-time AI responses** powered by Google Gemini
+- **Floating chat widget** with elegant animations
+- **Mobile-responsive** design
+- **Professional conversation** about skills, projects, and experience
+- **Instant availability** - 24/7 portfolio assistant
 
-## 📋 Pages
+### 💼 **Professional Portfolio**
+- **Modern design** with dark theme
+- **Responsive layout** for all devices
+- **Smooth animations** using AOS library
+- **Project showcases** with detailed descriptions
+- **Contact integration** with social links
 
-- **Home** (`index.html`) - Hero section, services, projects preview, and call-to-action
-- **About** (`about.html`) - Personal information, education, experience, skills, and awards
-- **Projects** (`projects.html`) - Showcase of AI and computer vision projects
-- **Contact** (`contact.html`) - Contact form and contact information
+### 🛠 **Technical Stack**
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap
+- **AI Chat**: React, TypeScript, Google Gemini API
+- **Build Tools**: Vite, Node.js
+- **Styling**: Custom CSS, Font Awesome icons
+- **Animations**: AOS (Animate On Scroll)
 
-## 🛠️ Technologies Used
+## 📂 Project Structure
 
-- **HTML5** - Semantic markup and structure
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript** - Interactive elements and animations
-- **Bootstrap** - Responsive framework
-- **Formspree** - Contact form backend
-- **AOS (Animate On Scroll)** - Scroll animations
-- **Owl Carousel** - Image carousels
-- **Magnific Popup** - Lightbox functionality
+```
+ronaldo-master/
+├── 📄 index.html                 # Main portfolio page
+├── 📄 about.html                 # About page
+├── 📄 projects.html              # Projects showcase
+├── 📄 contact.html               # Contact page
+├── 🎨 css/                       # Stylesheets
+├── ⚡ js/                        # JavaScript files
+│   ├── main.js                   # Portfolio functionality
+│   └── maneesh-chat-widget.js    # AI chat widget
+├── 🖼️ images/                    # Portfolio images
+├── 🔤 fonts/                     # Web fonts
+├── 🤖 personal-portfolio-chatbot/ # AI chat source code
+│   ├── 📄 App.tsx                # Main chat application
+│   ├── 📄 constants.ts           # Personal information
+│   ├── 🧩 components/           # React components
+│   ├── 🔧 services/             # API services
+│   └── 📦 package.json          # Dependencies
+└── 📚 README.md                  # This file
+```
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- A modern web browser
-- Basic understanding of HTML/CSS (for customization)
+### 1. **View the Portfolio**
+Simply open `index.html` in your web browser to see the complete portfolio with AI chat assistant.
 
-### Installation
+### 2. **Test the AI Chat**
+- Look for the **floating purple chat button** in the bottom-right corner
+- Click to open the AI assistant
+- Ask questions like:
+  - "Tell me about your experience at MacV AI"
+  - "What programming languages do you know?"
+  - "Describe your disaster rescue drone project"
+  - "How can I contact you?"
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/ManeeshProg/portfolio.git
-   cd portfolio
-   ```
+### 3. **Development Setup** (Optional)
+If you want to modify the chat assistant:
 
-2. **Set up Formspree** (for contact form)
-   - Go to [Formspree.io](https://formspree.io)
-   - Create an account and a new form
-   - Update `config.js` with your form endpoint
-
-3. **Customize the content**
-   - Update personal information in `config.js`
-   - Replace images in the `images/` folder
-   - Modify content in HTML files
-
-4. **Run locally**
-   ```bash
-   # Using Python (if installed)
-   python -m http.server 8000
-   
-   # Using Node.js (if installed)
-   npx serve .
-   
-   # Or simply open index.html in your browser
-   ```
-
-5. **Visit your site**
-   - Open `http://localhost:8000` in your browser
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── index.html              # Home page
-├── about.html              # About page
-├── projects.html           # Projects page
-├── contact.html            # Contact page
-├── config.js               # Configuration file
-├── config.example.js       # Example configuration
-├── README.md               # This file
-├── .gitignore              # Git ignore rules
-├── Maneesh_resume_agent.pdf # Resume file
-│
-├── css/                    # Stylesheets
-│   ├── style.css          # Main stylesheet
-│   ├── bootstrap.min.css  # Bootstrap framework
-│   ├── animate.css        # Animation library
-│   └── ...                # Other CSS files
-│
-├── js/                     # JavaScript files
-│   ├── main.js            # Main JavaScript
-│   ├── jquery.min.js      # jQuery library
-│   ├── bootstrap.min.js   # Bootstrap JS
-│   └── ...                # Other JS files
-│
-└── images/                 # Image assets
-    ├── bg_1.jpg           # Background images
-    ├── work-1.jpg         # Project images
-    ├── IMG_3381.JPG       # Profile image
-    └── ...                # Other images
+```bash
+cd personal-portfolio-chatbot
+npm install
+npm run dev          # Development server
+npm run build:widget # Build for production
 ```
 
-## ⚙️ Configuration
+## 🤖 AI Chat Assistant Features
 
-### Formspree Setup
-1. Create a Formspree account at [formspree.io](https://formspree.io)
-2. Create a new form
-3. Copy your form endpoint URL
-4. Update `config.js`:
-   ```javascript
-   const config = {
-       formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
-       // ... other config
-   };
-   ```
+### **What the AI Can Tell You About:**
+- 🎓 **Education**: B.Tech in AI & ML, St. Joseph's College (CGPA: 8.40)
+- 💼 **Experience**: Computer Vision Intern at MacV AI, VLSI Intern at IIITDM Chennai
+- 🛠️ **Skills**: Python, TensorFlow, PyTorch, OpenCV, Deep Learning, and more
+- 🚀 **Projects**: 
+  - Disaster Rescue Drone with ML/DL
+  - Smart Camera with real-time processing
+  - Automatic Internship Agent
+  - Face-Based Attendance System
+- 📞 **Contact**: Email, LinkedIn, GitHub, phone information
 
-### Personal Information
-Update your personal details in `config.js`:
-```javascript
-const config = {
-    personalInfo: {
-        name: 'Your Name',
-        email: 'your.email@example.com',
-        phone: '+1 234 567 8900',
-        location: 'Your City, Country',
-        linkedin: 'https://linkedin.com/in/yourprofile',
-        github: 'https://github.com/yourusername'
-    }
-};
-```
+### **Chat Features:**
+- ✅ **Instant responses** with streaming text
+- ✅ **Professional conversation** style
+- ✅ **Accurate information** about Maneesh's background
+- ✅ **Mobile-friendly** interface
+- ✅ **Beautiful animations** and smooth UX
 
 ## 🎨 Customization
 
-### Colors
-Main colors are defined in `css/style.css`:
+### **Styling the Chat Widget**
+The chat widget automatically matches your portfolio's theme. To customize:
+
 ```css
-:root {
-    --primary-color: #F96D00;
-    --secondary-color: #2C3E50;
-    --text-color: #333333;
-    --light-bg: #F8F9FA;
+.chat-widget-container {
+    bottom: 30px;  /* Position from bottom */
+    right: 30px;   /* Position from right */
+}
+
+.chat-toggle-btn {
+    background: linear-gradient(135deg, #your-color, #your-color);
 }
 ```
 
-### Fonts
-The portfolio uses Google Fonts (Poppins). To change:
-1. Update the Google Fonts link in HTML files
-2. Modify font-family in CSS
+### **Updating Chat Information**
+Edit `personal-portfolio-chatbot/constants.ts` to update:
+- Personal information
+- Skills and technologies
+- Project descriptions
+- Contact details
 
-### Images
-- Replace images in the `images/` folder
-- Update image paths in HTML files
-- Recommended image sizes:
-  - Hero background: 1920x1080px
-  - Project images: 600x400px
-  - Profile image: 400x400px
+## 📱 Mobile Responsiveness
 
-## 📱 Responsive Design
+The portfolio and chat assistant are fully responsive:
+- **Desktop**: Full sidebar + chat widget
+- **Tablet**: Optimized layout with accessible chat
+- **Mobile**: Compact design with full-screen chat option
 
-The portfolio is fully responsive and works on:
-- **Desktop** (1200px+)
-- **Tablet** (768px - 1199px)
-- **Mobile** (320px - 767px)
+## 🔧 Technical Implementation
 
-## 🔧 Development
+### **Chat Widget Integration**
+The AI assistant is integrated as a single JavaScript file:
+```html
+<script src="js/maneesh-chat-widget.js"></script>
+```
 
-### Adding New Pages
-1. Create a new HTML file
-2. Copy the structure from existing pages
-3. Update navigation links
-4. Add page-specific content
+### **Build Process**
+```bash
+# Development
+npm run dev
 
-### Adding New Projects
-1. Add project image to `images/` folder
-2. Update `projects.html` with new project details
-3. Update project counter in `index.html`
+# Production build
+npm run build:widget
+```
 
-## 🚀 Deployment
+### **API Configuration**
+The chat uses Google Gemini AI with hardcoded API key for demo purposes. For production, implement proper environment variable management.
 
-### GitHub Pages
-1. Push your code to GitHub
-2. Go to repository Settings > Pages
-3. Select source branch (usually `main`)
-4. Your site will be available at `https://username.github.io/repository-name`
+## 🌐 Deployment
 
-### Netlify
-1. Connect your GitHub repository to Netlify
-2. Deploy automatically on push
-3. Custom domain support available
+### **GitHub Pages**
+1. Upload repository to GitHub
+2. Enable GitHub Pages in repository settings
+3. Set source to main branch
+4. Access via `https://yourusername.github.io/repository-name`
 
-### Azure Static Web Apps
-1. Install Azure CLI
-2. Run: `az staticwebapp create --name your-portfolio --source .`
-3. Follow the deployment prompts
+### **Custom Domain**
+Add `CNAME` file with your domain name for custom domain deployment.
 
-## 📞 Contact
+## 🤝 Contributing
 
-- **Email**: maneeshprog@gmail.com
-- **LinkedIn**: [Maneesh V](https://www.linkedin.com/in/maneesh-v-5a2303256/)
-- **GitHub**: [ManeeshProg](https://github.com/ManeeshProg)
-- **Phone**: +91 73581 12574
+This is a personal portfolio project, but feedback and suggestions are welcome!
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
+## 📞 Contact
 
-- Template inspiration from various portfolio designs
-- Icons from [Ionicons](https://ionicons.com/)
-- Animation library [AOS](https://michalsnik.github.io/aos/)
-- Form handling by [Formspree](https://formspree.io)
+**Maneesh V**
+- 📧 Email: maneeshprog@gmail.com
+- 💼 LinkedIn: [Profile](https://www.linkedin.com/in/maneesh-v-5a2303256)
+- 🐙 GitHub: [ManeeshProg](https://github.com/ManeeshProg)
+- 📱 Phone: +91 7358112574
 
 ---
 
-⭐ **Star this repository if you found it helpful!**
+<div align="center">
 
-Made with ❤️ by [Maneesh V](https://github.com/ManeeshProg) 
+**💡 Showcasing AI/ML expertise through an interactive portfolio experience**
+
+*Built with passion for innovation and cutting-edge technology*
+
+</div>
