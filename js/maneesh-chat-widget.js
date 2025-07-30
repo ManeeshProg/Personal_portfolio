@@ -577,7 +577,7 @@ Highlight expertise in AI, Computer Vision, and current MacV AI internship when 
                         font-size: 10px;
                         color: #888;
                         border-top: 1px solid #333;
-                        background: #1a1a1a;
+                        background:rgba(26, 26, 26, 0.96);
                     }
 
                     .chat-attribution span {
