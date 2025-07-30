@@ -35,7 +35,7 @@
                 from_email: formData.get('from_email'),
                 subject: formData.get('subject'),
                 message: formData.get('message'),
-                to_email: 'maneeshprog@gmail.com'
+                to_email: 'your.email@example.com'
             };
 
             // Validate form
@@ -66,12 +66,12 @@
                 const body = encodeURIComponent(
                     `From: ${templateParams.from_name} (${templateParams.from_email})\n\n${templateParams.message}`
                 );
-                const mailtoLink = `mailto:maneeshprog@gmail.com?subject=${subject}&body=${body}`;
+                const mailtoLink = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
                 
                 showMessage(
                     '⚠️ Email service temporarily unavailable. ' +
                     '<a href="' + mailtoLink + '" class="alert-link">Click here to open your email client</a> ' +
-                    'or contact directly at maneeshprog@gmail.com',
+                    'or contact directly at your.email@example.com',
                     'warning'
                 );
             })
@@ -144,7 +144,7 @@
                     const body = encodeURIComponent(
                         `From: ${formData.get('from_name')} (${formData.get('from_email')})\n\n${formData.get('message')}`
                     );
-                    const mailtoLink = `mailto:maneeshprog@gmail.com?subject=${subject}&body=${body}`;
+                    const mailtoLink = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
                     
                     window.open(mailtoLink);
                 });
